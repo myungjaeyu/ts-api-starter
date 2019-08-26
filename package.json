@@ -19,5 +19,8 @@
   "homepage": "https://github.com/myungjaeyu/ts-api-starter#readme",
   "devDependencies": {
     "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
