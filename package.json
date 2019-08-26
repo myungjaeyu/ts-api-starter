@@ -14,6 +14,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "assetPath": "static",
   "bugs": {
     "url": "https://github.com/myungjaeyu/ts-api-starter/issues"
   },
