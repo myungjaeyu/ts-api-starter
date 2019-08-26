@@ -4,6 +4,7 @@ import morgan from 'morgan'
 import session from 'express-session'
 
 import * as passport from './config/passport'
+import * as sequelize from './config/sequelize'
 
 import authRouter from './controllers/auth'
 
@@ -25,6 +26,7 @@ app.use(session({
 }))
 
 passport.init(app)
+sequelize.run(sequelize.init(), { force: false })
 
 app.use('/auth', authRouter)
 
