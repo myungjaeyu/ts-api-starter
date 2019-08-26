@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "DEBUG=ts-api-starter:* node --inspect=5858 -r ts-node/register ./src/bin/www.ts"
   },
   "repository": {
     "type": "git",
