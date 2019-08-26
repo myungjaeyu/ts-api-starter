@@ -1,6 +1,7 @@
 import path from 'path'
 import express from 'express'
 import morgan from 'morgan'
+import session from 'express-session'
 
 const app: express.Application = express()
 
@@ -13,5 +14,11 @@ if (env === 'development') app.use(morgan('dev'))
 app.use('/static', express.static(path.join(__dirname, pkg.assetPath)))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+
+app.use(session({ 
+    secret: 'myungjaeyu123@!',
+    resave: true,
+    saveUninitialized: true
+}))
 
 export default app
