@@ -3,6 +3,8 @@ import { Strategy as LocalStrategy } from 'passport-local'
 
 import { Request, Response, NextFunction, Application } from 'express'
 
+import { User } from '../models/User'
+
 import Debug from 'debug'
 
 const debug = Debug('ts-api-starter:passport')
@@ -27,12 +29,15 @@ export const init = (app: Application) => {
 
         debug('deserializeUser', id)
 
-        const user: Object = {
-            id,
-            username: 'u4bi'
-        }
+        User.findByPk(id).then((user: User | null) => {
 
-        done(null, user)
+            done(null, user)
+
+        }).catch((err: any) => {
+
+            done(err)
+
+        })
 
     })
 
@@ -43,18 +48,23 @@ export const init = (app: Application) => {
 
         debug('LocalStrategy', username, password)
 
-        if (username !== 'u4bi')
-            return done(undefined, false, { message: `Username ${username} not found.` })
-        else {
+        User.findOne({ where: { name: username }})
+            .then((user: User | null) => {
 
-            const user: Object = {
-                id: 1,
-                username: 'u4bi'
-            }
+                if (!user)
+                    return done(undefined, false, { message: `Username ${ username } not found.` })
 
-            return done(null, user)
+                if (user.name === username)
+                    return done(null, user)
 
-        }
+                done(null, false)
+
+            })
+            .catch((err: any) => {
+
+                done(err)
+
+            })
 
     }))
 
