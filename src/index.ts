@@ -5,6 +5,8 @@ import session from 'express-session'
 
 import * as passport from './config/passport'
 
+import authRouter from './controllers/auth'
+
 const app: express.Application = express()
 
 const env: string = process.env.NODE_ENV || 'development'
@@ -24,5 +26,7 @@ app.use(session({
 }))
 
 passport.init(app)
+
+app.use('/auth', authRouter)
 
 export default app

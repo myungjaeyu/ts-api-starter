@@ -1,7 +1,7 @@
 import passport from 'passport'
 import { Strategy as LocalStrategy } from 'passport-local'
 
-import { Application } from 'express'
+import { Request, Response, NextFunction, Application } from 'express'
 
 import Debug from 'debug'
 
@@ -61,5 +61,16 @@ export const init = (app: Application) => {
 
     app.use(passport.initialize())
     app.use(passport.session())
+
+}
+
+export const isAuthenticated = (req: Request, res: Response, next: NextFunction) => {
+
+    debug('isAuthenticated', req.isAuthenticated())
+
+    if (req.isAuthenticated())
+        return next()
+
+    res.sendStatus(401)
 
 }
