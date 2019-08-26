@@ -3,6 +3,8 @@ import express from 'express'
 import morgan from 'morgan'
 import session from 'express-session'
 
+import * as passport from './config/passport'
+
 const app: express.Application = express()
 
 const env: string = process.env.NODE_ENV || 'development'
@@ -20,5 +22,7 @@ app.use(session({
     resave: true,
     saveUninitialized: true
 }))
+
+passport.init(app)
 
 export default app
