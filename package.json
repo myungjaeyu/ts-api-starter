@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/myungjaeyu/ts-api-starter/issues"
   },
-  "homepage": "https://github.com/myungjaeyu/ts-api-starter#readme"
+  "homepage": "https://github.com/myungjaeyu/ts-api-starter#readme",
+  "devDependencies": {
+    "typescript": "^3.5.3"
+  }
 }
