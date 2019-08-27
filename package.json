@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "jest",
     "start": "NODE_ENV=poduction node dist/bin/www",
     "build": "ttsc",
     "dev": "DEBUG=ts-api-starter:* node --inspect=5858 -r ts-node/register ./src/bin/www.ts",
