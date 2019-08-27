@@ -7,7 +7,7 @@ import Debug from 'debug'
 
 const debug = Debug('ts-api-starter:controllers:user')
 
-export const signin = (req: Request, res: Response, next: NextFunction) => {
+const authSignIn = (req: Request, res: Response, next: NextFunction) => {
 
     debug('postLogin', req.body)
 
@@ -32,16 +32,4 @@ export const signin = (req: Request, res: Response, next: NextFunction) => {
 
 }
 
-export const signout = (req: Request, res: Response) => {
-
-    req.logout()
-
-    res.sendStatus(204)
-
-}
-
-export const getProfile = (req: Request, res: Response) => {
-
-    res.json({ user: req.user })
-
-}
+export default authSignIn

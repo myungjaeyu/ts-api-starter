@@ -1,14 +1,17 @@
 import { Router } from 'express'
-import * as authCtrl from './auth.controller'
+
+import authSignIn from './auth.signin.controller'
+import authSignOut from './auth.signout.controller'
+import authGetProfile from './auth.profile.controller'
 
 import { isAuthenticated } from '../../config/passport'
 
 const authRouter = Router()
 
-authRouter.post('/signin', authCtrl.signin)
+authRouter.post('/signin', authSignIn)
 
-authRouter.post('/signout', isAuthenticated, authCtrl.signout)
+authRouter.post('/signout', isAuthenticated, authSignOut)
 
-authRouter.get('/profile', isAuthenticated, authCtrl.getProfile)
+authRouter.get('/profile', isAuthenticated, authGetProfile)
 
 export default authRouter
