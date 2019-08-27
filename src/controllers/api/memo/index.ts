@@ -1,10 +1,10 @@
 import { Router } from 'express'
 
-import { QueryCtrl, ShowCtrl, CreateCtrl, UpdateCtrl, DestroyCtrl } from './memo.ctrl'
+import { QueryCtrl, ShowCtrl, CreateCtrl, UpdateCtrl, DestroyCtrl } from './memo.controller'
 
 import http from '../http'
 
-import memoService from '../../../services/memoService'
+import memoService from '../../../services/memo.service'
 
 const memoRouter: Router = Router()
 

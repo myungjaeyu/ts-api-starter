@@ -1,5 +1,5 @@
 import { Memo } from '../../../models/memo'
-import memoService from '../../../services/memoService'
+import memoService from '../../../services/memo.service'
 import { Controller } from '../http'
 
 interface QueryCtrlProps {

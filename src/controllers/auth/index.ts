@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import * as authCtrl from './auth.ctrl'
+import * as authCtrl from './auth.controller'
 
 import { isAuthenticated } from '../../config/passport'
 
