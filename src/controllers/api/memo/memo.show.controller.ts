@@ -1,5 +1,5 @@
 import { Memo } from '@models/Memo'
-import { Controller } from '../http'
+import { Controller } from '@routes/api/http'
 
 import { MemoShowControllerProps } from '@interfaces/memo.interface'
 

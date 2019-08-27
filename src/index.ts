@@ -6,8 +6,8 @@ import session from 'express-session'
 import * as passport from './config/passport'
 import * as sequelize from './config/sequelize'
 
-import authRouter from './controllers/auth'
-import apiRouter from './controllers/api'
+import authRouter from './routes/auth'
+import apiRouter from './routes/api'
 
 const app: express.Application = express()
 

@@ -1,4 +1,4 @@
-import { Controller } from '../http'
+import { Controller } from '@routes/api/http'
 
 import { MemoCreateControllerProps } from '@interfaces/memo.interface'
 

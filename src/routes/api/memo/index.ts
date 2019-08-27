@@ -1,10 +1,10 @@
 import { Router } from 'express'
 
-import MemoQueryController from './memo.query.controller'
-import MemoShowController from './memo.show.controller'
-import MemoCreateController from './memo.create.controller'
-import MemoUpdateController from './memo.update.controller'
-import MemoDestroyController from './memo.destroy.controller'
+import MemoQueryController from '@controllers/api/memo/memo.query.controller'
+import MemoShowController from '@controllers/api/memo/memo.show.controller'
+import MemoCreateController from '@controllers/api/memo/memo.create.controller'
+import MemoUpdateController from '@controllers/api/memo/memo.update.controller'
+import MemoDestroyController from '@controllers/api/memo/memo.destroy.controller'
 
 import http from '../http'
 
