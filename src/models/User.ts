@@ -1,4 +1,6 @@
-import {Table, Model, PrimaryKey, AutoIncrement, Column} from 'sequelize-typescript'
+import {Table, Model, PrimaryKey, AutoIncrement, Column, HasMany} from 'sequelize-typescript'
+
+import { Memo } from './Memo'
 
 @Table
 export class User extends Model<User> {
@@ -10,4 +12,7 @@ export class User extends Model<User> {
 
     @Column
     name: string
+
+    @HasMany(() => Memo)
+    memos: Memo[]
 }

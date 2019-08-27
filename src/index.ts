@@ -7,6 +7,7 @@ import * as passport from './config/passport'
 import * as sequelize from './config/sequelize'
 
 import authRouter from './controllers/auth'
+import apiRouter from './controllers/api'
 
 const app: express.Application = express()
 
@@ -29,5 +30,6 @@ passport.init(app)
 sequelize.run(sequelize.init(), { force: false })
 
 app.use('/auth', authRouter)
+app.use('/api', passport.isAuthenticated, apiRouter)
 
 export default app
