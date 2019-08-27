@@ -1,4 +1,4 @@
-import { Memo } from '../../../models/Memo'
+import { Memo } from '@models/Memo'
 
 const show = async (id: number): Promise<Memo | null> => {
 

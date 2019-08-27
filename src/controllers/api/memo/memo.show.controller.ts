@@ -1,7 +1,7 @@
-import { Memo } from '../../../models/memo'
+import { Memo } from '@models/Memo'
 import { Controller } from '../http'
 
-import { MemoShowControllerProps } from '../../../interfaces/memo.interface'
+import { MemoShowControllerProps } from '@interfaces/memo.interface'
 
 export default class MemoShowController extends Controller<MemoShowControllerProps> {
 

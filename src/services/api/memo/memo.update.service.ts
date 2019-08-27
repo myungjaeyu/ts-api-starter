@@ -1,4 +1,4 @@
-import { Memo } from '../../../models/Memo'
+import { Memo } from '@models/Memo'
 
 const update = async (id: number, text: string, date: number): Promise<any> => {
 

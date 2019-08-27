@@ -4,7 +4,7 @@ import authSignIn from './auth.signin.controller'
 import authSignOut from './auth.signout.controller'
 import authGetProfile from './auth.profile.controller'
 
-import { isAuthenticated } from '../../config/passport'
+import { isAuthenticated } from '@config/passport'
 
 const authRouter = Router()
 

@@ -1,4 +1,4 @@
-import memoService from '../services/api/memo'
+import memoService from '@services/api/memo'
 
 export interface MemoQueryControllerProps {
     memoService: typeof memoService

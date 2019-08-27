@@ -1,4 +1,4 @@
-import { Memo } from '../../../models/Memo'
+import { Memo } from '@models/Memo'
 import { Order } from 'sequelize/types'
 
 const query = async (limit: number, offset: number, order: Order = [['date', 'DESC']]): Promise<Memo[] | undefined>  => {

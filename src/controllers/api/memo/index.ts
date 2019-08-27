@@ -8,7 +8,7 @@ import MemoDestroyController from './memo.destroy.controller'
 
 import http from '../http'
 
-import memoService from '../../../services/api/memo'
+import memoService from '@services/api/memo'
 
 const memoRouter: Router = Router()
 

@@ -1,6 +1,6 @@
 import { Controller } from '../http'
 
-import { MemoDestroyControllerProps } from '../../../interfaces/memo.interface'
+import { MemoDestroyControllerProps } from '@interfaces/memo.interface'
 
 export default class MemoDestroyController extends Controller<MemoDestroyControllerProps> {
 

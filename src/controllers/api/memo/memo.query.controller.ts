@@ -1,6 +1,6 @@
 import { Controller } from '../http'
 
-import { MemoQueryControllerProps } from '../../../interfaces/memo.interface'
+import { MemoQueryControllerProps } from '@interfaces/memo.interface'
 
 export default class MemoQueryController extends Controller<MemoQueryControllerProps> {
 

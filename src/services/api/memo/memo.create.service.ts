@@ -1,4 +1,4 @@
-import { Memo } from '../../../models/Memo'
+import { Memo } from '@models/Memo'
 
 const create = async (text: string, date: number, userId: number): Promise<Memo | undefined> => {
 
