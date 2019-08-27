@@ -13,6 +13,7 @@
       "@interfaces/*": ["interfaces/*"],
       "@models/*": ["models/*"],
       "@services/*": ["services/*"],
+      "@routes/*": ["routes/*"]
     },
     "plugins": [
       { "transform": "typescript-transform-paths" }
