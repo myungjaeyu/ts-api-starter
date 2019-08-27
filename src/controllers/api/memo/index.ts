@@ -4,7 +4,7 @@ import { QueryCtrl, ShowCtrl, CreateCtrl, UpdateCtrl, DestroyCtrl } from './memo
 
 import http from '../http'
 
-import memoService from '../../../services/memo.service'
+import memoService from '../../../services/api/memo'
 
 const memoRouter: Router = Router()
 
