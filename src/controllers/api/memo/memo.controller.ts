@@ -1,14 +1,11 @@
 import { Memo } from '../../../models/memo'
-import memoService from '../../../services/api/memo'
 import { Controller } from '../http'
 
-interface QueryCtrlProps {
-    memoService: typeof memoService
-}
+import { MemoQueryControllerProps, MemoShowControllerProps, MemoCreateControllerProps, MemoUpdateControllerProps, MemoDestroyControllerProps } from '../../../interfaces/memo.interface'
 
-export class QueryCtrl extends Controller<QueryCtrlProps> {
+export class QueryCtrl extends Controller<MemoQueryControllerProps> {
 
-    constructor(services: QueryCtrlProps) {
+    constructor(services: MemoQueryControllerProps) {
 
         super(services)
 
@@ -27,13 +24,9 @@ export class QueryCtrl extends Controller<QueryCtrlProps> {
 
 }
 
-interface ShowCtrlProps {
-    memoService: typeof memoService
-}
+export class ShowCtrl extends Controller<MemoShowControllerProps> {
 
-export class ShowCtrl extends Controller<ShowCtrlProps> {
-
-    constructor(props: ShowCtrlProps) {
+    constructor(props: MemoShowControllerProps) {
 
         super(props)
 
@@ -59,13 +52,9 @@ export class ShowCtrl extends Controller<ShowCtrlProps> {
 
 }
 
-interface CreateCtrlProps {
-    memoService: typeof memoService
-}
+export class CreateCtrl extends Controller<MemoCreateControllerProps> {
 
-export class CreateCtrl extends Controller<CreateCtrlProps> {
-
-    constructor(props: CreateCtrlProps) {
+    constructor(props: MemoCreateControllerProps) {
         super(props)
     }
 
@@ -86,13 +75,9 @@ export class CreateCtrl extends Controller<CreateCtrlProps> {
 
 }
 
-interface UpdateCtrlProps {
-    memoService: typeof memoService
-}
+export class UpdateCtrl extends Controller<MemoUpdateControllerProps> {
 
-export class UpdateCtrl extends Controller<UpdateCtrlProps> {
-
-    constructor(props: UpdateCtrlProps) {
+    constructor(props: MemoUpdateControllerProps) {
         super(props)
     }
 
@@ -114,13 +99,9 @@ export class UpdateCtrl extends Controller<UpdateCtrlProps> {
 
 }
 
-interface DestroyCtrlProps {
-    memoService: typeof memoService
-}
+export class DestroyCtrl extends Controller<MemoDestroyControllerProps> {
 
-export class DestroyCtrl extends Controller<DestroyCtrlProps> {
-
-    constructor(props: DestroyCtrlProps) {
+    constructor(props: MemoDestroyControllerProps) {
         super(props)
     }
 

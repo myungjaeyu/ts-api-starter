@@ -1,6 +1,8 @@
 import path from 'path'
 import { Sequelize } from 'sequelize-typescript'
 
+import { SequelizeOptions } from '../interfaces/sequelize.interface'
+
 import Debug from 'debug'
 
 const debug = Debug('ts-api-starter:sequelize')
@@ -19,12 +21,7 @@ export const init = (): Sequelize => {
     return sequelize
 }
 
-interface Options {
-    force?: boolean
-    seed?: boolean
-}
-
-export const run = async (sequelize: Sequelize, options: Options) => {
+export const run = async (sequelize: Sequelize, options: SequelizeOptions) => {
 
     await sequelize.sync({ force: options.force || false })
 
