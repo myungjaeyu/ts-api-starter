@@ -9,14 +9,9 @@ const debug = Debug('ts-api-starter:sequelize')
 
 export const init = (): Sequelize => {
 
-    const sequelize: Sequelize = new Sequelize({
-        database: 'postgres',
-        dialect: 'postgres',
-        host: 'localhost',
-        username: 'postgres',
-        password: 'postgres',
-        modelPaths: [path.resolve(__dirname,'../models')]
-    })
+    const sequelize: Sequelize = new Sequelize(process.env.DB_CONNECTION || 'postgres://postgres:postgres@localhost:5432/postgres')
+
+    sequelize.addModels([path.resolve(__dirname,'../models')]);
 
     return sequelize
 }
