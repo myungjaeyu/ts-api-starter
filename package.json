@@ -7,7 +7,7 @@
     "test": "jest",
     "start": "NODE_ENV=poduction node dist/bin/www",
     "build": "ttsc",
-    "dev": "DEBUG=ts-api-starter:* node --inspect=5858 -r ts-node/register ./src/bin/www.ts",
+    "dev": "DEBUG=ts-api-starter:* node --inspect=5858 -r ts-node/register -r tsconfig-paths/register ./src/bin/www.ts",
     "dev:watch": "nodemon"
   },
   "repository": {
@@ -46,6 +46,7 @@
     "nodemon": "^1.19.1",
     "ts-jest": "^24.0.2",
     "ts-node": "^8.3.0",
+    "tsconfig-paths": "^3.8.0",
     "ttypescript": "^1.5.7",
     "typescript": "^3.5.3",
     "typescript-transform-paths": "^1.1.10"
