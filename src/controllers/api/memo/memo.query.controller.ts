@@ -2,7 +2,7 @@ import { Controller } from '@routes/api/http'
 
 import { MemoQueryControllerProps } from '@interfaces/memo.interface'
 
-export default class MemoQueryController extends Controller<MemoQueryControllerProps> {
+export class MemoQueryController extends Controller<MemoQueryControllerProps> {
 
     constructor(props: MemoQueryControllerProps) {
 

@@ -3,7 +3,7 @@ import { Controller } from '@routes/api/http'
 
 import { MemoShowControllerProps } from '@interfaces/memo.interface'
 
-export default class MemoShowController extends Controller<MemoShowControllerProps> {
+export class MemoShowController extends Controller<MemoShowControllerProps> {
 
     constructor(props: MemoShowControllerProps) {
 

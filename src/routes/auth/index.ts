@@ -1,8 +1,6 @@
 import { Router } from 'express'
 
-import authSignIn from '@controllers/auth/auth.signin.controller'
-import authSignOut from '@controllers/auth/auth.signout.controller'
-import authGetProfile from '@controllers/auth/auth.profile.controller'
+import { authSignIn, authSignOut, authGetProfile } from '@controllers/auth'
 
 import { isAuthenticated } from '@config/passport'
 

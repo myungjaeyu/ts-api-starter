@@ -2,7 +2,7 @@ import { Controller } from '@routes/api/http'
 
 import { MemoDestroyControllerProps } from '@interfaces/memo.interface'
 
-export default class MemoDestroyController extends Controller<MemoDestroyControllerProps> {
+export class MemoDestroyController extends Controller<MemoDestroyControllerProps> {
 
     constructor(props: MemoDestroyControllerProps) {
 

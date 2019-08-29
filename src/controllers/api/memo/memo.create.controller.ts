@@ -2,7 +2,7 @@ import { Controller } from '@routes/api/http'
 
 import { MemoCreateControllerProps } from '@interfaces/memo.interface'
 
-export default class MemoCreateController extends Controller<MemoCreateControllerProps> {
+export class MemoCreateController extends Controller<MemoCreateControllerProps> {
 
     constructor(props: MemoCreateControllerProps) {
 
